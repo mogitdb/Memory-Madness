@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://8sbhf43ox41l"]
+[gd_scene load_steps=4 format=3 uid="uid://8sbhf43ox41l"]
 
 [ext_resource type="FontFile" uid="uid://ivs41grp4csq" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_acevm"]
+[ext_resource type="PackedScene" uid="uid://c8lqs13vvb2ka" path="res://front_sprite.tscn" id="2_pu1y7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aogmj"]
 font = ExtResource("1_acevm")
@@ -60,6 +61,19 @@ size_flags_vertical = 3
 [node name="HBSprites" type="HBoxContainer" parent="VB"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 72
+
+[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+layout_mode = 2
 
 [node name="Spacer" type="Control" parent="VB"]
 layout_mode = 2
