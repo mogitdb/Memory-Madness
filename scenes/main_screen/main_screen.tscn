@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8sbhf43ox41l"]
+[gd_scene load_steps=6 format=3 uid="uid://8sbhf43ox41l"]
 
+[ext_resource type="Script" path="res://scenes/main_screen/main_screen.gd" id="1_65mvr"]
 [ext_resource type="FontFile" uid="uid://ivs41grp4csq" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_acevm"]
 [ext_resource type="PackedScene" uid="uid://bc4fmqkbyevq7" path="res://scenes/level_button/level_button.tscn" id="2_lx5p2"]
-[ext_resource type="PackedScene" uid="uid://c8lqs13vvb2ka" path="res://front_sprite.tscn" id="2_pu1y7"]
+[ext_resource type="PackedScene" uid="uid://c8lqs13vvb2ka" path="res://front_sprite/front_sprite.tscn" id="4_je2t3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aogmj"]
 font = ExtResource("1_acevm")
@@ -18,6 +19,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_65mvr")
+level_button_scene = ExtResource("2_lx5p2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -56,24 +59,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 8
 
-[node name="LevelButton" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
-[node name="LevelButton2" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
-[node name="LevelButton3" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
-[node name="LevelButton4" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
-[node name="LevelButton5" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
-[node name="LevelButton6" parent="VB/HBLevels" instance=ExtResource("2_lx5p2")]
-layout_mode = 2
-
 [node name="Spacer2" type="Control" parent="VB"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -83,16 +68,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 72
 
-[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("4_je2t3")]
 layout_mode = 2
 
-[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("4_je2t3")]
 layout_mode = 2
 
-[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("4_je2t3")]
 layout_mode = 2
 
-[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_pu1y7")]
+[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("4_je2t3")]
 layout_mode = 2
 
 [node name="Spacer" type="Control" parent="VB"]
