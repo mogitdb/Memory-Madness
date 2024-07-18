@@ -1,16 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://8sbhf43ox41l"]
+[gd_scene load_steps=5 format=3 uid="uid://8sbhf43ox41l"]
 
 [ext_resource type="Script" path="res://scenes/main_screen/main_screen.gd" id="1_65mvr"]
-[ext_resource type="FontFile" uid="uid://ivs41grp4csq" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_acevm"]
 [ext_resource type="PackedScene" uid="uid://bc4fmqkbyevq7" path="res://scenes/level_button/level_button.tscn" id="2_lx5p2"]
+[ext_resource type="LabelSettings" uid="uid://btqhx8pa2ee3u" path="res://assets/LG_84_Green.tres" id="3_jjywt"]
 [ext_resource type="PackedScene" uid="uid://c8lqs13vvb2ka" path="res://front_sprite/front_sprite.tscn" id="4_je2t3"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_aogmj"]
-font = ExtResource("1_acevm")
-font_size = 84
-font_color = Color(0.92549, 0.988235, 0.796078, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -46,7 +39,7 @@ size_flags_vertical = 3
 [node name="Label" type="Label" parent="VB"]
 layout_mode = 2
 text = "MEMORY MADNESS"
-label_settings = SubResource("LabelSettings_aogmj")
+label_settings = ExtResource("3_jjywt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
