@@ -1,5 +1,9 @@
 extends TextureButton
 
+
+class_name MemoryTile
+
+
 @onready var frame_image = $FrameImage
 @onready var item_image = $ItemImage
 
@@ -39,4 +43,4 @@ func on_selection_enabled() -> void:
 
 func _on_pressed():
 	if _can_select_me == true:
-		reveal(true)
+		SignalManager.on_tile_selected.emit(self)
