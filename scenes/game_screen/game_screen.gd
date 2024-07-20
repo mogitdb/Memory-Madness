@@ -3,10 +3,11 @@ extends Control
 
 @export var mem_tile_scene: PackedScene
 
-
+@onready var moves_label = $HB/MC2/VBoxContainer/HB/MovesLabel
+@onready var pairs_label = $HB/MC2/VBoxContainer/HB2/PairsLabel
 @onready var sound = $Sound
 @onready var tile_container = $HB/MC1/TileContainer
-@onready var scorer = $Scorer
+@onready var scorer: Scorer = $Scorer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +17,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	moves_label.text = scorer.get_moves_made_str()
+	pairs_label.text = scorer.get_pairs_made_str()
 
 
 func add_memory_tile(ii_dict: Dictionary, frame_image: CompressedTexture2D) -> void:
