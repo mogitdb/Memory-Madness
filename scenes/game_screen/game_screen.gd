@@ -6,6 +6,7 @@ extends Control
 
 @onready var sound = $Sound
 @onready var tile_container = $HB/MC1/TileContainer
+@onready var scorer = $Scorer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +34,8 @@ func on_level_selected(level_num: int) -> void:
 	
 	for ii_dict in level_selection.image_list:
 		add_memory_tile(ii_dict, frame_image)
+		
+	scorer.clear_new_game(level_selection.target_pairs)
 
 func _on_exit_button_pressed():
 	SoundManager.play_button_click(sound)
