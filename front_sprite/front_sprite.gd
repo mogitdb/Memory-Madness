@@ -27,7 +27,7 @@ func get_random_rotation() -> float:
 
 func run_me() -> void:
 	var tween = get_tree().create_tween()
-	tween.set_loops()
+	#tween.set_loops()
 	tween.tween_callback(set_random_image)
 	tween.tween_property(self, "scale", SCALE_NORMAL, SCALE_TIME)
 	tween.tween_property(self, "rotation", 
@@ -37,4 +37,5 @@ func run_me() -> void:
 								get_random_rotation(), 
 								get_random_spin_time())
 	tween.tween_property(self, "scale", SCALE_SMALL, SCALE_TIME)
+	tween.tween_callback(run_me)
 
